@@ -1,12 +1,8 @@
 {
-  "version": 2,
-  "builds": [
-    { "src": "code.html", "use": "@vercel/static" },
-    { "src": "assets/**", "use": "@vercel/static" }
-  ],
-  "routes": [
-    { "src": "^/$", "dest": "/code.html" },
-    { "src": "^/(.*)$", "dest": "/$1" }
-  ],
-  "cleanUrls": true
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/code.html"
+    }
+  ]
 }
