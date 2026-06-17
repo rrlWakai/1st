@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Our Story | Happy 1st Monthsary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#410007",
+                    "outline-variant": "#dcc0bf",
+                    "tertiary": "#605e56",
+                    "tertiary-container": "#98958c",
+                    "surface": "#fff8f7",
+                    "tertiary-fixed-dim": "#cac6bc",
+                    "background": "#fff8f7",
+                    "on-primary-container": "#5e0c15",
+                    "on-primary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed-variant": "#4c4546",
+                    "on-secondary-fixed": "#1f1a1b",
+                    "surface-dim": "#ffced0",
+                    "primary-container": "#e57373",
+                    "secondary-container": "#ebe0e0",
+                    "secondary-fixed-dim": "#cec4c4",
+                    "surface-bright": "#fff8f7",
+                    "primary-fixed": "#ffdad8",
+                    "primary": "#a03e40",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "inverse-on-surface": "#ffeced",
+                    "surface-container-high": "#ffe1e2",
+                    "tertiary-fixed": "#e6e2d8",
+                    "on-tertiary-fixed-variant": "#48473f",
+                    "surface-container-lowest": "#ffffff",
+                    "on-background": "#3c0610",
+                    "on-surface": "#3c0610",
+                    "on-tertiary-fixed": "#1c1c15",
+                    "surface-container": "#ffe9e9",
+                    "secondary-fixed": "#ebe0e0",
+                    "secondary": "#645d5d",
+                    "on-tertiary-container": "#2f2e27",
+                    "inverse-primary": "#ffb3b1",
+                    "primary-fixed-dim": "#ffb3b1",
+                    "surface-variant": "#ffdadb",
+                    "surface-container-highest": "#ffdadb",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#fff0f0",
+                    "inverse-surface": "#581b24",
+                    "error-container": "#ffdad6",
+                    "on-secondary-container": "#6a6363",
+                    "surface-tint": "#a03e40",
+                    "on-surface-variant": "#564241",
+                    "on-primary-fixed-variant": "#80272b",
+                    "outline": "#897271",
+                    "on-error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "32px",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1200px",
+                    "margin-mobile": "24px",
+                    "unit": "8px",
+                    "stack-md": "32px",
+                    "stack-lg": "48px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Playfair Display"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"],
+                    "body-md": ["Inter"],
+                    "label-sm": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["28px", {"lineHeight": "36px", "fontWeight": "500"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #fff8f7;
+            overflow-x: hidden;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(253, 242, 242, 0.3);
+        }
+        .grain {
+            position: relative;
+        }
+        .grain::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: url("https://www.transparenttextures.com/patterns/p6.png");
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: 10;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .masonry {
+            columns: 1;
+            column-gap: 24px;
+        }
+        @media (min-width: 768px) {
+            .masonry { columns: 2; }
+        }
+        @media (min-width: 1024px) {
+            .masonry { columns: 3; }
+        }
+        .parallax-bg {
+            transform: translateY(var(--scroll-offset, 0));
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface selection:bg-primary-fixed-dim selection:text-on-primary-container">
+<!-- Global Background Shader -->
+<div class="fixed inset-0 -z-20 w-full h-full">
+<!-- STITCH_SHADER_START:ANIMATION_2 class="w-full h-full" -->
+<div class="w-full h-full" style="display:block;">
+<canvas id="shader-canvas-ANIMATION_2" style="display:block;width:100%;height:100%"></canvas>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_2');
+
+  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+  // This fires on initial layout and whenever the element is resized.
+  function syncSize() {
+    const w = canvas.clientWidth  || 1280;
+    const h = canvas.clientHeight || 720;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+uniform float u_time;
+uniform vec2 u_resolution;
+uniform vec2 u_mouse;
+varying vec2 v_texCoord;
+
+void main() {
+    vec2 uv = v_texCoord;
+    vec2 p = (uv - 0.5) * 2.0;
+    p.x *= u_resolution.x / u_resolution.y;
+
+    // Soft warm rose background
+    vec3 color = vec3(0.99, 0.95, 0.95); 
+    
+    // Create soft floating bokeh circles
+    for(float i = 0.0; i < 8.0; i++) {
+        float t = u_time * (0.1 + i * 0.05);
+        vec2 offset = vec2(
+            sin(t + i * 1.5) * 0.6,
+            cos(t * 0.8 + i) * 0.4
+        );
+        
+        float dist = length(p - offset);
+        float size = 0.2 + sin(t * 0.5) * 0.1;
+        float strength = smoothstep(size, size - 0.4, dist);
+        
+        // Soft pink and cream glows
+        vec3 glowColor = mix(vec3(1.0, 0.8, 0.8), vec3(1.0, 1.0, 0.9), sin(i) * 0.5 + 0.5);
+        color += glowColor * strength * 0.15;
+    }
+
+    // Add a gentle vignette
+    color *= 1.0 - length(p * 0.5) * 0.3;
+
+    gl_FragColor = vec4(color, 1.0);
+}`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+  // Shaders that need normalized coords should use: u_mouse / u_resolution.
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+  window.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width && rect.height) {
+      const nx = (event.clientX - rect.left) / rect.width;
+      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+      mouse.x = nx * canvas.width;
+      mouse.y = ny * canvas.height;
+    }
+  });
+
+  function render(t) {
+    if (typeof ResizeObserver === 'undefined') syncSize();
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+</script>
+</div>
+<!-- STITCH_SHADER_END:ANIMATION_2 -->
+</div>
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 left-0 right-0 z-50 flex justify-center items-center">
+<div class="bg-white/60 dark:bg-black/40 backdrop-blur-xl rounded-full mt-6 mx-auto w-fit px-6 py-2 border border-white/20 dark:border-white/10 shadow-sm flex items-center gap-8">
+<span class="font-headline-md text-headline-md text-primary italic">Our Story</span>
+<div class="hidden md:flex gap-6">
+<a class="text-secondary opacity-70 hover:text-primary transition-colors duration-300 font-body-md text-body-md" href="#gallery">Gallery</a>
+<a class="text-secondary opacity-70 hover:text-primary transition-colors duration-300 font-body-md text-body-md" href="#letter">The Letter</a>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary scale-95 active:scale-90 transition-transform cursor-pointer">music_note</span>
+<span class="material-symbols-outlined text-primary scale-95 active:scale-90 transition-transform cursor-pointer">favorite</span>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="min-h-screen flex flex-col items-center justify-center text-center px-margin-mobile md:px-margin-desktop relative overflow-hidden">
+<video id="hero-video" class="absolute inset-0 w-full h-full object-cover" src="assets/hero.mp4" autoplay muted loop playsinline></video>
+<div class="absolute inset-0 bg-black/25"></div>
+<div id="hero-content" class="relative z-10 max-w-4xl space-y-stack-md">
+<p class="font-label-sm text-label-sm text-primary uppercase tracking-[0.2em] animate-pulse">1st Month Anniversary</p>
+<h1 class="font-display-lg text-display-lg md:text-[80px] leading-tight text-on-surface">
+                Happy 1st Monthsary, <span class="italic text-primary">Love ❤️</span>
+</h1>
+<p class="font-headline-md text-headline-md text-secondary max-w-2xl mx-auto opacity-80">
+                One month down, forever to go.
+            </p>
+<div class="pt-stack-md">
+<a class="inline-flex items-center gap-2 bg-primary text-on-primary px-8 py-4 rounded-full font-body-lg text-body-lg hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1" href="#gallery">
+                    Our Story
+                    <span class="material-symbols-outlined">arrow_downward</span>
+</a>
+</div>
+<div class="absolute inset-x-0 bottom-10 flex justify-center">
+<span class="material-symbols-outlined text-[48px] text-primary opacity-50 animate-bounce">expand_more</span>
+</div>
+</div>
+</section>
+<!-- Reasons I Love You Section (Bento) -->
+<section class="py-stack-lg bg-surface-container-low/50">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-stack-lg">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Why My Heart Chose You</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-6 gap-6">
+<div class="md:col-span-3 reveal glass p-stack-md rounded-xl hover:bg-white/80 transition-colors">
+<span class="material-symbols-outlined text-primary text-[40px] mb-4">sentiment_very_satisfied</span>
+<h4 class="font-headline-md text-headline-md mb-2">Your Smile</h4>
+<p class="text-on-surface-variant">The way your face lights up can turn my entire day around in an instant. It's the most beautiful thing I've ever seen.</p>
+</div>
+<div class="md:col-span-3 reveal glass p-stack-md rounded-xl hover:bg-white/80 transition-colors">
+<span class="material-symbols-outlined text-primary text-[40px] mb-4">volunteer_activism</span>
+<h4 class="font-headline-md text-headline-md mb-2">Your Support</h4>
+<p class="text-on-surface-variant">Knowing you're in my corner gives me the strength to face anything. Thank you for always believing in me.</p>
+</div>
+<div class="md:col-span-2 reveal glass p-stack-md rounded-xl hover:bg-white/80 transition-colors">
+<span class="material-symbols-outlined text-primary text-[40px] mb-4">self_care</span>
+<h4 class="font-headline-md text-headline-md mb-2">My Peace</h4>
+<p class="text-on-surface-variant">In a loud world, you are my quiet sanctuary. I feel safe when I'm with you.</p>
+</div>
+<div class="md:col-span-4 reveal glass p-stack-md rounded-xl hover:bg-white/80 transition-colors flex items-center gap-6">
+<div>
+<span class="material-symbols-outlined text-primary text-[40px] mb-4">auto_awesome</span>
+<h4 class="font-headline-md text-headline-md mb-2">How You Understand</h4>
+<p class="text-on-surface-variant">You see parts of me nobody else does, and you love me more for them. It's a rare and precious gift.</p>
+</div>
+</div>
+<div class="md:col-span-3 reveal glass p-stack-md rounded-xl hover:bg-white/80 transition-colors">
+<span class="material-symbols-outlined text-primary text-[40px] mb-4">stars</span>
+<h4 class="font-headline-md text-headline-md mb-2">You're Special</h4>
+<p class="text-on-surface-variant">There is nobody else like you. Your soul is unique, kind, and incredibly radiant.</p>
+</div>
+<div class="md:col-span-3 reveal glass p-stack-md rounded-xl hover:bg-white/80 transition-colors">
+<span class="material-symbols-outlined text-primary text-[40px] mb-4">bolt</span>
+<h4 class="font-headline-md text-headline-md mb-2">You Inspire</h4>
+<p class="text-on-surface-variant">The way you carry yourself and your kindness inspires me to be a better person every single day.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Section -->
+<section class="py-stack-lg px-margin-mobile md:px-margin-desktop" id="gallery">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-stack-lg">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Captured Moments</h2>
+</div>
+<div class="masonry space-y-6">
+<div class="reveal overflow-hidden rounded-xl bg-secondary-container h-80 grain group relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Gallery image 1" src="assets/image.jpg"/>
+</div>
+<div class="reveal overflow-hidden rounded-xl bg-secondary-container h-64 grain group relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Gallery image 2" src="assets/image1.jpg"/>
+</div>
+<div class="reveal overflow-hidden rounded-xl bg-secondary-container h-96 grain group relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Gallery image 3" src="assets/image2.jpg"/>
+</div>
+<div class="reveal overflow-hidden rounded-xl bg-secondary-container h-64 grain group relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Gallery image 4" src="assets/image3.jpg"/>
+</div>
+<div class="reveal overflow-hidden rounded-xl bg-secondary-container h-80 grain group relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Gallery image 5" src="assets/image5.jpg"/>
+</div>
+<div class="reveal overflow-hidden rounded-xl bg-secondary-container h-72 grain group relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Gallery image 6" src="assets/image6.jpg"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Love Letter Section -->
+<section class="py-stack-lg px-margin-mobile" id="letter">
+<div class="max-w-3xl mx-auto reveal">
+<div class="glass p-12 md:p-20 rounded-xl relative overflow-hidden grain shadow-xl">
+<div class="absolute top-0 right-0 p-8 text-primary/10">
+<span class="material-symbols-outlined text-[120px]">format_quote</span>
+</div>
+<div class="relative z-10 space-y-8">
+<h2 class="font-headline-lg text-headline-lg text-primary border-b border-primary/10 pb-6">To My Dearest...</h2>
+<div class="font-headline-md text-headline-md italic leading-relaxed text-on-surface-variant">
+                        "Happy Monthsary, my loveyy.
+                        <br/><br/>
+                        Today, my heart is full of gratitude—not only because I have you, but because God made a way for our paths to cross and allowed this relationship to happen in His perfect timing. Looking back, I truly believe that what we have is one of His beautiful blessings in our lives.
+                        <br/><br/>
+                        Thank you for staying by my side through the happy moments and even the difficult ones. I know our relationship may face challenges, misunderstandings, and trials, but I believe that with God at the center of our relationship, we can overcome them together.
+                        <br/><br/>
+                        No relationship is perfect, but I promise to continue choosing you every day. I pray that we will always have the wisdom to understand one another, the patience to forgive, and the strength to keep fighting for our love.
+                        <br/><br/>
+                        May we continue to grow not only as a couple but also in our faith. I hope we never stop falling in love with each other in new ways every day, while continuing to become the people God wants us to be.
+                        <br/><br/>
+                        Thank you for your love, your patience, and your presence in my life. I am excited for all the memories we have yet to create together. No matter what comes our way, let us keep trusting God's plans and walk through life hand in hand.
+                        <br/><br/>
+                        Happy Monthsary, my lovey. Thank you for being one of God's greatest blessings in my life. I love you always. ❤️"
+                    </div>
+<div class="pt-8 flex justify-between items-end">
+<div>
+<p class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">With all my heart,</p>
+<p class="font-headline-md text-headline-md text-primary mt-2">Always Yours</p>
+</div>
+<div class="text-primary-container">
+<span class="material-symbols-outlined text-[64px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Countdown & Music Control -->
+<section class="py-stack-lg text-center reveal">
+<div class="glass inline-block px-12 py-8 rounded-xl shadow-sm">
+<h3 class="font-label-sm text-label-sm text-primary uppercase tracking-[0.2em] mb-4">Next Monthsary In:</h3>
+<div class="flex gap-8 justify-center items-center">
+<div>
+<span class="font-display-lg text-display-lg text-on-surface" id="days">29</span>
+<p class="text-secondary text-sm">Days</p>
+</div>
+<span class="text-primary text-4xl">:</span>
+<div>
+<span class="font-display-lg text-display-lg text-on-surface" id="hours">14</span>
+<p class="text-secondary text-sm">Hours</p>
+</div>
+<span class="text-primary text-4xl">:</span>
+<div>
+<span class="font-display-lg text-display-lg text-on-surface" id="mins">42</span>
+<p class="text-secondary text-sm">Mins</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="flex flex-col items-center gap-unit max-w-container-max mx-auto w-full py-stack-lg">
+<div class="w-full max-w-sm h-px bg-gradient-to-r from-transparent via-outline-variant to-transparent mb-8"></div>
+<div class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-4">Forever &amp; Always</div>
+<div class="flex gap-8 mb-6">
+<a class="text-on-secondary-fixed-variant hover:text-primary transition-all duration-500 font-body-md text-body-md opacity-80 hover:opacity-100" href="#gallery">Gallery</a>
+<a class="text-on-secondary-fixed-variant hover:text-primary transition-all duration-500 font-body-md text-body-md opacity-80 hover:opacity-100" href="#letter">The Letter</a>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-60">Made with love by Rhen ❤️</p>
+</footer>
+<!-- Floating UI: Music Player -->
+<div class="fixed bottom-6 right-6 z-50">
+<audio id="bg-music" src="assets/music.mp3" preload="auto" loop></audio>
+<div class="glass flex items-center gap-4 px-4 py-3 rounded-full shadow-lg border border-primary/20">
+<div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-on-primary animate-spin-slow">
+<span class="material-symbols-outlined">music_note</span>
+</div>
+<div class="hidden md:block">
+<p class="text-[10px] font-bold text-primary uppercase tracking-tighter">Now Playing</p>
+<p class="text-sm font-medium text-on-surface truncate w-32">Our Theme Song</p>
+</div>
+<button id="music-toggle" class="text-primary hover:scale-110 transition-transform" aria-label="Toggle music">
+<span id="music-icon" class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+</div>
+<script>
+        // Reveal Animation on Scroll
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        window.addEventListener("load", reveal);
+
+        // Hide hero text after 10 seconds
+        function hideHeroContent() {
+            const heroContent = document.getElementById('hero-content');
+            if (!heroContent) return;
+            heroContent.style.transition = 'opacity 1s ease';
+            heroContent.style.opacity = '0';
+            setTimeout(() => {
+                heroContent.style.display = 'none';
+            }, 1000);
+        }
+        setTimeout(hideHeroContent, 10000);
+
+        // Simple Countdown Logic (Next 18th of the Month)
+        function updateCountdown() {
+            const now = new Date();
+            const currentYear = now.getFullYear();
+            const currentMonth = now.getMonth();
+            let target = new Date(currentYear, currentMonth, 18, 0, 0, 0, 0);
+            if (now >= target) {
+                target = new Date(currentYear, currentMonth + 1, 18, 0, 0, 0, 0);
+            }
+            const diff = target - now;
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((diff / (1000 * 60)) % 60);
+            document.getElementById('days').innerText = days;
+            document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+            document.getElementById('mins').innerText = String(minutes).padStart(2, '0');
+        }
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // Music Rotation Class
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @keyframes spin-slow {
+                from { transform: rotate(0deg); }
+                to { transform: rotate(360deg); }
+            }
+            .animate-spin-slow {
+                animation: spin-slow 8s linear infinite;
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Parallax Effect
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            document.documentElement.style.setProperty('--scroll-offset', scrolled * 0.5 + 'px');
+        });
+
+        const music = document.getElementById('bg-music');
+        const toggle = document.getElementById('music-toggle');
+        const icon = document.getElementById('music-icon');
+
+        function updateMusicState() {
+            if (music.paused) {
+                icon.textContent = 'play_arrow';
+            } else {
+                icon.textContent = 'pause';
+            }
+        }
+
+        toggle.addEventListener('click', () => {
+            if (music.paused) {
+                music.play();
+            } else {
+                music.pause();
+            }
+            updateMusicState();
+        });
+
+        music.addEventListener('ended', updateMusicState);
+        music.addEventListener('play', updateMusicState);
+        music.addEventListener('pause', updateMusicState);
+    </script>
+</body></html>
