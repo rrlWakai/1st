@@ -282,25 +282,25 @@ void main() {
 </div>
 </nav>
 <!-- Hero Section -->
-<section class="min-h-screen flex flex-col items-center justify-center text-center px-margin-mobile md:px-margin-desktop relative overflow-hidden">
+<section class="min-h-[85vh] sm:min-h-screen flex flex-col items-center justify-center text-center px-4 sm:px-6 md:px-margin-desktop relative overflow-hidden">
 <video id="hero-video" class="absolute inset-0 w-full h-full object-cover" src="assets/hero.mp4" autoplay muted loop playsinline></video>
 <div class="absolute inset-0 bg-black/25"></div>
-<div id="hero-content" class="relative z-10 max-w-4xl space-y-stack-md">
+<div id="hero-content" class="relative z-10 max-w-3xl space-y-stack-md px-2 sm:px-0">
 <p class="font-label-sm text-label-sm text-primary uppercase tracking-[0.2em] animate-pulse">1st Month Anniversary</p>
-<h1 class="font-display-lg text-display-lg md:text-[80px] leading-tight text-on-surface">
+<h1 class="text-[42px] sm:text-[52px] md:text-[80px] leading-tight sm:leading-tight text-on-surface">
                 Happy 1st Monthsary, <span class="italic text-primary">Love ❤️</span>
 </h1>
-<p class="font-headline-md text-headline-md text-secondary max-w-2xl mx-auto opacity-80">
+<p class="font-headline-md text-body-lg sm:text-headline-md text-secondary max-w-xl mx-auto opacity-90">
                 One month down, forever to go.
             </p>
 <div class="pt-stack-md">
-<a class="inline-flex items-center gap-2 bg-primary text-on-primary px-8 py-4 rounded-full font-body-lg text-body-lg hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1" href="#gallery">
+<a class="inline-flex w-full sm:w-auto justify-center items-center gap-2 bg-primary text-on-primary px-6 py-3 sm:px-8 sm:py-4 rounded-full font-body-lg text-body-lg hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1" href="#gallery">
                     Our Story
                     <span class="material-symbols-outlined">arrow_downward</span>
 </a>
 </div>
-<div class="absolute inset-x-0 bottom-10 flex justify-center">
-<span class="material-symbols-outlined text-[48px] text-primary opacity-50 animate-bounce">expand_more</span>
+<div class="absolute inset-x-0 bottom-6 flex justify-center">
+<span class="material-symbols-outlined text-[40px] sm:text-[48px] text-primary opacity-50 animate-bounce">expand_more</span>
 </div>
 </div>
 </section>
@@ -353,23 +353,23 @@ void main() {
 <h2 class="font-headline-lg text-headline-lg text-on-surface">Captured Moments</h2>
 </div>
 <div class="masonry space-y-6">
-<div class="reveal overflow-hidden rounded-xl bg-secondary-container h-80 grain group relative">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Gallery image 1" src="assets/image.jpg"/>
+<div class="reveal overflow-hidden rounded-xl bg-secondary-container aspect-[4/5] grain group relative">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Gallery image 1" src="assets/image.jpg"/>
 </div>
-<div class="reveal overflow-hidden rounded-xl bg-secondary-container h-64 grain group relative">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Gallery image 2" src="assets/image1.jpg"/>
+<div class="reveal overflow-hidden rounded-xl bg-secondary-container aspect-[4/5] grain group relative">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Gallery image 2" src="assets/image1.jpg"/>
 </div>
-<div class="reveal overflow-hidden rounded-xl bg-secondary-container h-96 grain group relative">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Gallery image 3" src="assets/image2.jpg"/>
+<div class="reveal overflow-hidden rounded-xl bg-secondary-container aspect-[4/5] grain group relative">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Gallery image 3" src="assets/image2.jpg"/>
 </div>
-<div class="reveal overflow-hidden rounded-xl bg-secondary-container h-64 grain group relative">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Gallery image 4" src="assets/image3.jpg"/>
+<div class="reveal overflow-hidden rounded-xl bg-secondary-container aspect-[4/5] grain group relative">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Gallery image 4" src="assets/image3.jpg"/>
 </div>
-<div class="reveal overflow-hidden rounded-xl bg-secondary-container h-80 grain group relative">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Gallery image 5" src="assets/image5.jpg"/>
+<div class="reveal overflow-hidden rounded-xl bg-secondary-container aspect-[4/5] grain group relative">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Gallery image 5" src="assets/image5.jpg"/>
 </div>
-<div class="reveal overflow-hidden rounded-xl bg-secondary-container h-72 grain group relative">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Gallery image 6" src="assets/image6.jpg"/>
+<div class="reveal overflow-hidden rounded-xl bg-secondary-container aspect-[4/5] grain group relative">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Gallery image 6" src="assets/image6.jpg"/>
 </div>
 </div>
 </div>
@@ -377,18 +377,18 @@ void main() {
 <!-- Love Letter Section -->
 <section class="py-stack-lg px-margin-mobile" id="letter">
 <div class="max-w-3xl mx-auto reveal">
-<div id="letter-envelope" class="group relative mx-auto w-full max-w-xl cursor-pointer">
+<div id="letter-envelope" class="group relative mx-auto w-full max-w-xl cursor-pointer px-4 sm:px-0">
 <div class="relative rounded-[2rem] border border-primary/20 bg-white/80 shadow-2xl overflow-hidden">
-<div class="absolute inset-x-0 top-0 h-24 bg-primary/80 transition-transform duration-700 ease-out" id="envelope-flap"></div>
-<div class="p-12 pt-32 text-center">
+<div class="absolute inset-x-0 top-0 h-24 sm:h-28 bg-primary/80 transition-transform duration-700 ease-out" id="envelope-flap"></div>
+<div class="p-8 sm:p-12 pt-28 sm:pt-32 text-center">
 <p class="font-label-sm text-label-sm text-primary uppercase tracking-[0.2em] mb-4">Click the envelope</p>
-<h2 class="font-headline-lg text-headline-lg text-primary">A Special Letter</h2>
-<p class="mt-4 text-on-surface-variant">Open the envelope to read what my heart is saying.</p>
+<h2 class="text-3xl sm:text-4xl font-headline-lg text-primary">A Special Letter</h2>
+<p class="mt-4 text-on-surface-variant text-sm sm:text-base">Open the envelope to read what my heart is saying.</p>
 </div>
 <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white via-white/80 to-transparent"></div>
 </div>
 </div>
-<div id="letter-content" class="hidden glass p-12 md:p-20 rounded-xl relative overflow-hidden grain shadow-xl mt-8">
+<div id="letter-content" class="hidden glass p-8 sm:p-12 rounded-xl relative overflow-hidden grain shadow-xl mt-8">
 <div class="absolute top-0 right-0 p-8 text-primary/10">
 <span class="material-symbols-outlined text-[120px]">format_quote</span>
 </div>
@@ -424,21 +424,21 @@ void main() {
 </section>
 <!-- Countdown & Music Control -->
 <section class="py-stack-lg text-center reveal">
-<div class="glass inline-block px-12 py-8 rounded-xl shadow-sm">
+<div class="glass inline-block w-full max-w-xl px-6 py-8 rounded-xl shadow-sm">
 <h3 class="font-label-sm text-label-sm text-primary uppercase tracking-[0.2em] mb-4">Next Monthsary In:</h3>
-<div class="flex gap-8 justify-center items-center">
-<div>
-<span class="font-display-lg text-display-lg text-on-surface" id="days">29</span>
+<div class="flex flex-col sm:flex-row sm:justify-center sm:items-center gap-4 sm:gap-8">
+<div class="flex flex-col items-center">
+<span class="font-display-lg text-[48px] sm:text-[56px] text-on-surface" id="days">29</span>
 <p class="text-secondary text-sm">Days</p>
 </div>
-<span class="text-primary text-4xl">:</span>
-<div>
-<span class="font-display-lg text-display-lg text-on-surface" id="hours">14</span>
+<span class="text-primary text-4xl hidden sm:block">:</span>
+<div class="flex flex-col items-center">
+<span class="font-display-lg text-[48px] sm:text-[56px] text-on-surface" id="hours">14</span>
 <p class="text-secondary text-sm">Hours</p>
 </div>
-<span class="text-primary text-4xl">:</span>
-<div>
-<span class="font-display-lg text-display-lg text-on-surface" id="mins">42</span>
+<span class="text-primary text-4xl hidden sm:block">:</span>
+<div class="flex flex-col items-center">
+<span class="font-display-lg text-[48px] sm:text-[56px] text-on-surface" id="mins">42</span>
 <p class="text-secondary text-sm">Mins</p>
 </div>
 </div>
